@@ -1,8 +1,8 @@
 cask "aptistockx" do
-  version "3.0"
-  sha256 "9b101dc9e61f0e4b6a5321edbfaf0520739fdb5ebfd6774b808248d6e30e7484"
+  version "3.1.0"
+  sha256 "68c04d29f73615d27cc02121d8cf48648da5e3dc1234a486b516c170d8d7db10"
 
-  url "https://downloads.aptistock.com/#{version}/AptiStockX-#{version}-macOS-universal.dmg"
+  url "https://downloads.aptistock.com/3.1/AptiStockX-#{version}-macOS-universal.dmg"
   name "AptiStockX"
   desc "Desktop stock analysis and portfolio research app"
   homepage "https://aptistock.com/"
@@ -11,6 +11,8 @@ cask "aptistockx" do
     url "https://aptistock.com/download"
     regex(/AptiStockX[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]universal\.dmg/i)
   end
+
+  depends_on :macos
 
   app "AptiStockX.app"
 
